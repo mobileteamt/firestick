@@ -110,9 +110,7 @@ class MainActivity : AppCompatActivity() {
 //        binding.btnVolumeDown.setOnClickListener {
 //            runCommandWithDebounce(KeyEventCodes.KEYCODE_VOLUME_DOWN)
 //        }
-
-
-
+        
         fun adjustVolume(increase: Boolean) {
             val command = if (increase) {
                 "service call audio 3 i32 3 i32 0 i32 1"
