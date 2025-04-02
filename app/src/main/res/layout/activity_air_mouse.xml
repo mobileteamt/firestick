@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkbackground"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <!-- Power and Settings Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="30dp"
+            android:layout_height="32dp"
+            android:background="@drawable/baseline_arrow_back_24"
+            android:contentDescription="@string/image_description" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.7"
+            android:gravity="center"
+            android:text="@string/air_mouse"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".1" />
+
+    </LinearLayout>
+
+    <!-- D-Pad Navigation -->
+    <View
+        android:id="@+id/cursor_view"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_margin="25dp"
+        android:background="@drawable/curved" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="12dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_playback"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:background="@drawable/playback"
+            android:contentDescription="@string/image_description" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight=".5" />
+
+        <ImageButton
+            android:id="@+id/btn_playforward"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:background="@drawable/playforward"
+            android:contentDescription="@string/image_description" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <ImageButton
+            android:id="@+id/imgBackward"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/backward"
+            android:contentDescription="@string/image_description" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/imgForward"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/forward"
+            android:contentDescription="@string/image_description" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/play"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/play"
+            android:contentDescription="@string/image_description" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/playPause"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/playpause"
+            android:contentDescription="@string/image_description" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

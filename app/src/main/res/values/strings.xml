@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">FireStick</string>
+    <string name="image_description">image_description</string>
+    <string name="air_mouse">Air Mouse</string>
+    <string name="keypad">Keypad</string>
+    <string name="settings">Settings</string>
+    <string name="device_switiching">Currently Connected With: </string>
+    <string name="device_discovery">Device Discovery</string>
+    <string name="terms_amp_condition"><![CDATA[Terms & Condition]]></string>
+    <string name="syc">Syc</string>
+    <string name="ok">OK</string>
+    <string name="device_sync">Device synchronized successfully</string>
+</resources>
