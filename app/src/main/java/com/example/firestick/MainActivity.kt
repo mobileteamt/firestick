@@ -103,20 +103,34 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        binding.btnVolumeUp.setOnClickListener {
-            volume += 0.01f
-            mainViewModel.getVolumeControl()?.setVolume(volume, null)
-            //runCommandWithDebounce(KeyEventCodes.KEYCODE_VOLUME_UP)
-            //mainViewModel.runVolumeCommand(5)
+//        binding.btnVolumeUp.setOnClickListener {
+//            runCommandWithDebounce(KeyEventCodes.KEYCODE_VOLUME_UP)
+//        }
+//
+//        binding.btnVolumeDown.setOnClickListener {
+//            runCommandWithDebounce(KeyEventCodes.KEYCODE_VOLUME_DOWN)
+//        }
 
+
+
+        fun adjustVolume(increase: Boolean) {
+            val command = if (increase) {
+                "service call audio 3 i32 3 i32 0 i32 1"
+            } else {
+                "service call audio 3 i32 3 i32 0 i32 2"
+            }
+
+            try {
+                val process = Runtime.getRuntime().exec(arrayOf("sh", "-c", command))
+                process.waitFor()
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
         }
 
-        binding.btnVolumeDown.setOnClickListener {
-            volume -= 0.01f
-            mainViewModel.getVolumeControl()?.setVolume(volume, null)
-            //runCommandWithDebounce(KeyEventCodes.KEYCODE_VOLUME_DOWN)
-            //mainViewModel.runVolumeCommand(2)
-        }
+        binding.btnVolumeUp.setOnClickListener { adjustVolume(true) }
+        binding.btnVolumeDown.setOnClickListener { adjustVolume(false) }
+
 
         binding.btnMute.setOnClickListener {
             mute = !mute
